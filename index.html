@@ -4,23 +4,22 @@
         <title>My Scratch Games</title>
         <style>
             /* Optional: Add CSS for layout and styling */
-            .game-container {
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-                padding: 10px;
-                text-align: center;
-            }
-            iframe {
-                width: 485px; /* Default Scratch embed width */
-                height: 402px; /* Default Scratch embed height */
-                border: none;
-            }
         </style>
     </head>
     <body>
-        <h1>My Awesome Scratch Games!</h1>
+        <h1>Isaac Schwartz's Awesome Scratch Games!</h1>
+        <ul>
+            <li onClick="changeGame('1080873414')">Math chicken</li>
+            <li onClick="changeGame('1072435364')">Space chase hard</li>
+            <li onClick="changeGame('1071839430')">Space chase easy</li>
+        </ul>
         <div class="game-list">
           <iframe src="https://scratch.mit.edu/projects/1080873414/embed" allowtransparency="true" width="585" height="482" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
     </body>
+    <script>
+        function changeGame (id) {
+            document.querySelector('iframe').src = `https://scratch.mit.edu/projects/${id}/embed`
+        }
+    </script>
 </html>
